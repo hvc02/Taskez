@@ -4,7 +4,14 @@ import Button from "../Button/Button";
 import ShowPassword from "../../assets/images/show-pass.svg";
 import HidePassword from "../../assets/images/hide-pass.svg";
 
-const Login = ({ handleChange, handleSubmit, values, errors, serverError }) => {
+const Login = ({
+  handleChange,
+  handleSubmit,
+  values,
+  errors,
+  serverError,
+  isSubmitting,
+}) => {
   const [showPassword, setShowPassword] = useState(false);
   return (
     <>
@@ -55,9 +62,10 @@ const Login = ({ handleChange, handleSubmit, values, errors, serverError }) => {
           </label>
         </div>
         <Button
-          text="submit"
+          text="Submit"
           variant="filled"
           fullwidth={true}
+          isLoading={isSubmitting}
           disabled={!values.email || !values.password}
         />
       </form>

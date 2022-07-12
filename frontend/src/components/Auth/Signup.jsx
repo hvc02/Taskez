@@ -10,6 +10,7 @@ const Signup = ({
   values,
   errors,
   serverError,
+  isSubmitting,
 }) => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -57,8 +58,9 @@ const Signup = ({
           )}
         </div>
         <Button
-          text="submit"
+          text="Submit"
           variant="filled"
+          isLoading={isSubmitting}
           fullwidth={true}
           disabled={!values.fullname || !values.email || !values.password}
         />

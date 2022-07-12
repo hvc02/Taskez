@@ -1,12 +1,17 @@
 import React from "react";
 
-const Button = ({ text, variant, onClick, disabled, fullwidth }) => {
+const Button = ({ text, variant, onClick, disabled, fullwidth, isLoading }) => {
   const btnClass = `btn btn--${variant} ${fullwidth ? `btn--fullwidth` : ""}`;
   return (
     <button className={btnClass} onClick={onClick} disabled={disabled}>
-      {text}
+      {!isLoading && text}
+      {isLoading && <Loader />}
     </button>
   );
+};
+
+const Loader = () => {
+  return <div className="btn__loader"></div>;
 };
 
 Button.defaultProps = {

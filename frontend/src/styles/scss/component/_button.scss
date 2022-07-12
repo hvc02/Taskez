@@ -8,6 +8,9 @@
   cursor: pointer;
   background-color: transparent;
   transition: opacity 0.25s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &--filled {
     background: #329c89;
@@ -23,8 +26,39 @@
     width: 100%;
   }
 
+  &__loader {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: conic-gradient(hsla(0, 100%, 100%, 0.5), #fff);
+    position: absolute;
+    animation: spin 1.4s linear infinite;
+    transform: translate(50%, 50%);
+
+    &::after {
+      width: 1.125rem;
+      height: 1.125rem;
+      position: absolute;
+      inset: 0 0 0 0;
+      background: #329c89;
+      border-radius: 50%;
+      content: "";
+      margin: auto;
+    }
+  }
+
   &:disabled {
     opacity: 0.65;
     cursor: initial;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
