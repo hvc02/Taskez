@@ -1,0 +1,58 @@
+.login__form {
+  padding-top: 2rem;
+  display: grid;
+  row-gap: 2rem;
+}
+
+.form__error-text {
+  color: #f65b2a;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // width: 35rem;
+
+  &::before {
+    content: "!";
+    font-size: 0.625rem;
+    width: 13px;
+    height: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.25rem;
+    color: #f65b2a;
+    margin-right: 0.5rem;
+    border: 1px solid #f65b2a;
+  }
+}
+
+.checkbox {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  &__label {
+    font-size: 0.625rem;
+    color: #9a9a9a;
+    cursor: pointer;
+  }
+
+  &__input {
+    accent-color: #329c89;
+    cursor: pointer;
+  }
+}
+
+.password__container {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.password__icon {
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
+}
