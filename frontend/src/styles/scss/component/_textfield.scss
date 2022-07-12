@@ -1,0 +1,21 @@
+@use "../abstract/variables" as *;
+
+.textfield {
+  width: 100%;
+  height: 45px;
+  color: $color-tertiary;
+  border: 1px solid #cbdbea;
+  border-radius: 8px;
+  padding-inline: 1.25rem;
+  padding-block: 1rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &:focus {
+    // outline-color: #329c89;
+    // outline: none;
+
+    border-color: #329c89;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 225, 255, 0.25);
+  }
+}
