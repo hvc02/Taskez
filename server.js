@@ -7,7 +7,7 @@ const auth = require("./middleware/auth");
 
 // App config
 const app = express();
-const port = process.env.SERVER_PORT;
+const port = process.env.PORT;
 
 // Database connection
 require("./utils/database").connect();
