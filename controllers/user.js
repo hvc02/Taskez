@@ -112,16 +112,16 @@ const userDetails = async (req, res) => {
 };
 
 const logoutUser = async (req, res) => {
-  console.log(req.user, "iii");
+  console.log(req, "iii");
   try {
     req.user.token = req.user.token.filter((token) => {
       return token.token !== req.token;
     });
     await req.user.save();
-    res.send();
+    res.status(200).send("Logged out successfully");
   } catch (error) {
+    console.log(error);
     res.status(400).send("Unable to logout");
-    console.log(err);
   }
 };
 
