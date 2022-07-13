@@ -36,7 +36,7 @@
 
   &__desc {
     & p {
-      color: $color-tertiary;
+      color: $clr-tertiary;
       font-size: 1.25rem;
       margin-block: 0;
       margin-top: 2rem;
@@ -58,7 +58,7 @@
     left: 4px;
     width: 1rem;
     height: 2px;
-    background-color: $color-tertiary;
+    background-color: $clr-tertiary;
   }
 }
 

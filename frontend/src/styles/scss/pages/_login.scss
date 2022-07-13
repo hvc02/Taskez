@@ -1,3 +1,5 @@
+@use "../abstract/variables" as *;
+
 .login__form {
   padding-top: 2rem;
   display: grid;
@@ -5,13 +7,12 @@
 }
 
 .form__error-text {
-  color: #f65b2a;
+  color: $clr-error;
   font-size: 0.75rem;
   margin-top: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  // width: 35rem;
 
   &::before {
     content: "!";
@@ -22,9 +23,9 @@
     align-items: center;
     justify-content: center;
     border-radius: 1.25rem;
-    color: #f65b2a;
+    color: $clr-error;
     margin-right: 0.5rem;
-    border: 1px solid #f65b2a;
+    border: 1px solid $clr-error;
   }
 }
 
@@ -40,7 +41,7 @@
   }
 
   &__input {
-    accent-color: #329c89;
+    accent-color: $clr-green;
     cursor: pointer;
   }
 }

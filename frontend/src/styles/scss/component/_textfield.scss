@@ -3,7 +3,7 @@
 .textfield {
   width: 100%;
   height: 45px;
-  color: $color-tertiary;
+  color: $clr-tertiary;
   border: 1px solid #cbdbea;
   border-radius: 8px;
   padding-inline: 1.25rem;
@@ -11,10 +11,7 @@
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
   &:focus {
-    // outline-color: #329c89;
-    // outline: none;
-
-    border-color: #329c89;
+    border-color: $clr-green;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 225, 255, 0.25);
   }
