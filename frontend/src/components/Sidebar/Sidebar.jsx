@@ -81,7 +81,7 @@ const Sidebar = () => {
             key={index}
             title={link.title}
             Icon={link.Icon}
-            onClick={link?.onClick ? link?.onClick : ""}
+            onClick={link?.onClick ? link?.onClick : null}
           />
         ))}
       </ul>
