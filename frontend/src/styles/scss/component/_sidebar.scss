@@ -1,0 +1,36 @@
+@use "../abstract/variables" as *;
+
+.sidebar {
+  height: 100vh;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #f0f0f0;
+  position: sticky;
+  top: 0;
+
+  &__logo {
+    margin-bottom: 8rem;
+    font-size: 1.5rem;
+    color: $color-primary;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    gap: 1.5rem;
+    color: $color-secondary;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+}
