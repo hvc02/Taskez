@@ -46,7 +46,7 @@ const Signup = ({
             />
 
             <img
-              className="show-password-icon"
+              className="password__icon"
               src={showPassword ? ShowPassword : HidePassword}
               alt="show password"
               onClick={() => setShowPassword(!showPassword)}
