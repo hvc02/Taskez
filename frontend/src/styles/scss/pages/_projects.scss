@@ -1,0 +1,23 @@
+@use "../abstract/variables" as *;
+
+.projects {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  color: $clr-primary;
+  max-width: 90rem;
+  margin-inline: auto;
+
+  &__main {
+    padding: 3rem;
+  }
+
+  &__wrapper {
+    padding-top: 7.5rem;
+
+    & > h1 {
+      font-size: 1.5rem;
+      color: $clr-primary;
+      margin-bottom: 2rem;
+    }
+  }
+}
