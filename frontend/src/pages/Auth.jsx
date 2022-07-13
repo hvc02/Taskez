@@ -25,7 +25,6 @@ const Auth = () => {
 
     const isError = validateForm(values);
     setErrors(isError);
-
     if (Object.keys(isError).length) {
       return;
     }
@@ -40,7 +39,7 @@ const Auth = () => {
         const response = await login({ email, password });
         const { token } = response.data;
         setCookie("session", token, { path: "/" });
-        navigate("/");
+        navigate("/projects");
       } catch (error) {
         const msg =
           error?.response?.data || "Unable to login. Kindly contact support.";
@@ -77,7 +76,7 @@ const Auth = () => {
         const response = await register({ name, email, password });
         const { token } = response.data;
         setCookie("session", token, { path: "/" });
-        navigate("/");
+        navigate("/projects");
       } catch (error) {
         const msg =
           error?.response?.data || "Unable to signup. Kindly contact support.";
