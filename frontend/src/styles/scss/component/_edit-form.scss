@@ -1,0 +1,49 @@
+@use "../abstract/variables" as *;
+
+.edit__input {
+  font-weight: 500;
+  font-size: 1rem;
+  color: $clr-primary;
+  border: none;
+  text-transform: capitalize;
+  padding: 0.5rem;
+  margin-bottom: 0.625rem;
+  &:focus {
+    outline: 1px solid #eeeeee;
+    border-radius: 5px;
+  }
+}
+
+.edit__hr {
+  width: 2.5rem;
+  margin-bottom: 7rem;
+  border-top: 3px solid $clr-green;
+}
+
+.edit__grid {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  column-gap: 2rem;
+  row-gap: 4rem;
+
+  & img {
+    margin-right: 8px;
+  }
+
+  & span {
+    color: #6b6b6b;
+    font-size: 14px;
+  }
+}
+
+.edit__desc {
+  width: 100%;
+  border: none;
+  resize: none;
+  padding: 0.5rem;
+
+  &:focus {
+    outline: 1px solid #eeeeee;
+    border-radius: 5px;
+  }
+}
